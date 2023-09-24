@@ -1,0 +1,90 @@
+{% extends "base.html"%}
+{% block start %}
+
+
+
+<div class = "container mt-5">
+    
+    <form>
+    <div class = "row">
+        <div class = "col-md-6" >
+            <input class = "form-control" value = "{{search}}" name = "search" placeholder = "Search"> 
+             {% comment %} Here above, we have put value = search in "" double quotes because it takes it as False/empty value if we
+              send "" from backed, i.e views.py> search = ""  {% endcomment %}
+        </div>
+
+        <div class = "col-md-1">
+            <button type = "submit" class = "btn btn-success">Search</button>
+        </div>
+
+        <div class = "col-md-5">
+          <select class="form-select" aria-label="Default select example" name = "optionFilter">
+            <option selected value="student_name">Filter</option>
+            <option value="student_id__student_id">ID</option>
+            <option value="student_name">Name</option>
+            <option value="department__department">Department</option>
+            <option value="student_age">Age</option>
+            <option value="student_email">Email</option>
+          </select> 
+
+        </div>
+
+        
+    </div>
+
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">S no.</th>
+            <th scope="col">student_id</th>
+            <th scope="col">student_name</th>
+            <th scope="col">department</th>
+            <th scope="col">student_age</th>
+            <th scope="col">student_email</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            {% for student in queryset %}
+
+          <tr>
+            <th scope="row">{{ queryset.start_index|add:forloop.counter0 }}</th>
+            <td>{{student.student_id}}</td>
+            <td>{{student.student_name}}</td>
+            <td>{{student.department}}</td>
+            <td>{{student.student_age}}</td>
+            <td>{{student.student_email}}</td>
+ 
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if not queryset.end_index %}
+      <h2 class = "text-center mt-5">
+        No Results Found...
+      </h2>
+
+      {% endif %}
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+        {% if queryset.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ queryset.previous_page_number }}">Previous</a></li>
+        {% endif %}
+        
+        {% for i in range %}
+          <li class="page-item"><a class="page-link" href="?page={{ i|add:1 }}">{{ i|add:1 }}</a></li>
+
+        {% endfor %}
+
+        
+        {% if queryset.has_next %}
+          <li class="page-item"><a class="page-link" href="?page={{ queryset.next_page_number }}">Next</a></li>
+        {% endif %}
+        </ul>
+      </nav>
+
+</div>
+  
+{% endblock %}

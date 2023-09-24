@@ -1,0 +1,52 @@
+{% extends "base.html"%}
+{% block start %}
+<div class = "container mt-5">
+
+    <form class="col-6 mx-auto card p-3 " method = "post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+        {% if messages %}
+            {% for message in messages %}
+        <div class = "alert {{message.tags}}" role = "alert">
+            {{ message }}
+        </div>
+            {% endfor %}
+
+        {% endif %}
+
+        <!-- Email input -->
+        <h2>Register</h2>
+
+        <hr>
+
+        <div class="form-outline mb-4 mt-1">
+          <input type="text" id="form2Example1" name="first_name" placeholder = "First Name" class="form-control" />
+        </div>
+        
+        <div class="form-outline mb-4 mt-1">
+            <input type="text" id="form2Example1" name = "last_name" placeholder = "Last Name" class="form-control" />
+        </div>
+        
+        <div class="form-outline mb-4 mt-1">
+          <input type="email" id="form2Example1" name = "username" placeholder = "Email Address" class="form-control" />
+        </div>
+        
+      
+          
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form2Example2" name = "password" placeholder = "Password" class="form-control" />
+        </div>
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+        
+        <div class = "text-center">
+        <p>Already have an account? <a href="/login">Login</a></p>
+
+        </div>
+      </form>
+
+
+  
+{% endblock %}

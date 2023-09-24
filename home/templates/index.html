@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+        <a href="/contact/">Contact</a>
+        |
+        <a href="/about/">About</a>
+        |
+        <a href="/recipes/">Recipes</a>
+
+
+        <h1> Student Details who can vote. </h1>
+
+
+
+    <table class = "container">
+        <tr>
+            <th> Sl. no </th>
+            <th> Name </th>
+            <th> Age </th>
+            <th> Can Vote</th>
+
+        </tr>
+
+        {% comment %} # used to iterate over the dataset from backend {% endcomment %}
+        {% for peoples in people%}
+        <tr>
+            {% comment %} # forloop.counter is used for serial number counting {% endcomment %}
+            <td>{{forloop.counter}}</td>
+            
+            {% comment %} # name variable in people list which is made in views.py {% endcomment %}
+            <td>{{peoples.name}}</td>
+            <td>{{peoples.age}}</td>
+
+            <td>
+                {% if peoples.age >= 18%}
+                👍
+                {% else %}
+                👎
+
+                {% endif %}
+
+            </td>
+        </tr>
+
+        {% comment %} #Django command for end {% endcomment %}
+        {% endfor %}
+
+    </table>
+        <p>{{text|truncatechars:0}}</p>
+
+{% endblock %}
