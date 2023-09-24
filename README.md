@@ -95,7 +95,30 @@ We welcome contributions to enhance the ReportCard project. If you discover any 
 5. Open a pull request (PR) on the main repository. In the PR description, please provide a clear explanation of your changes and the problem they address. Be sure to reference any relevant issues in your description.
 
 Thank you for contributing to the ReportCard project! Your efforts will help improve the project for everyone.
+Usage
 
+To make the most of the ReportCard generation website, follow these steps:
+
+    Generate a ReportCard:
+        Sign up or log in to your account.
+        Access the ReportCard generation interface.
+        Fill in the required information such as student details, grades, and comments.
+        Click the "Generate ReportCard" button to create a ReportCard based on the entered data.
+
+    Customize Templates:
+        Explore the available ReportCard templates to choose the one that best suits your needs.
+        Customize the ReportCard template by modifying the HTML/CSS code as required.
+
+    Preview and Download:
+        Review the generated ReportCard to ensure accuracy.
+        Download the ReportCard in your preferred format (e.g., PDF).
+
+    Manage ReportCards:
+        Access a dashboard to view and manage all the ReportCards you've generated.
+        Edit or delete ReportCards as needed.
+
+    Contributions and Customization:
+        If you're interested in contributing to this project or customizing it for your specific requirements, please refer to the Contributing section in this README for detailed instructions.
 ## License
 
 ReportCard is an open-source project and is licensed under the MIT License.
