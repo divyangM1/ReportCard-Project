@@ -64,35 +64,35 @@ Follow these steps to set up the ReportCard Project locally on your machine:
 
 9. Visit [http://127.0.0.1:8000](http://127.0.0.1:8000) in your web browser to access the ReportCard Project.
 
-## Contributing
+Contributing
 
 We welcome contributions to enhance the ReportCard project. If you discover any bugs, have feature requests, or wish to submit improvements, please follow these steps:
 
-1. Fork the repository on GitHub.
+    Fork the repository on GitHub.
 
-2. Create a new branch with a descriptive name, for example:
+    Create a new branch with a descriptive name, for example:
 
-   - For adding a new feature:
+        For adding a new feature:
 
-     ```shell
-     git checkout -b feature/your-feature
-     ```
+        shell
 
-   - For fixing an issue:
+git checkout -b feature/your-feature
 
-     ```shell
-     git checkout -b bugfix/issue-description
-     ```
+For fixing an issue:
 
-3. Implement your changes and commit them with clear commit messages that describe the purpose of each commit.
+shell
 
-4. Push your changes to your fork on GitHub:
+    git checkout -b bugfix/issue-description
 
-   ```shell
-   git push origin feature/your-feature
-   ```
+Implement your changes and commit them with clear commit messages that describe the purpose of each commit.
 
-5. Open a pull request (PR) on the main repository. In the PR description, please provide a clear explanation of your changes and the problem they address. Be sure to reference any relevant issues in your description.
+Push your changes to your fork on GitHub:
+
+shell
+
+    git push origin feature/your-feature
+
+    Open a pull request (PR) on the main repository. In the PR description, please provide a clear explanation of your changes and the problem they address. Be sure to reference any relevant issues in your description.
 
 Thank you for contributing to the ReportCard project! Your efforts will help improve the project for everyone.
 Usage
@@ -119,16 +119,15 @@ To make the most of the ReportCard generation website, follow these steps:
 
     Contributions and Customization:
         If you're interested in contributing to this project or customizing it for your specific requirements, please refer to the Contributing section in this README for detailed instructions.
-## License
+
+License
 
 ReportCard is an open-source project and is licensed under the MIT License.
+Credits
 
-## Credits
+The design and inspiration for ReportCard are drawn from the templates provided by bootstapious.com.
+Contact
 
-The design and inspiration for ReportCard are drawn from the templates provided by [bootstapious.com](https://bootstapious.com).
-
-## Contact
-
-If you have any questions, suggestions, or need further assistance, please don't hesitate to contact our team at [divyangmandal03@gmail.com](mailto:divyangmandal03@gmail.com) or by creating an issue on this repository.
+If you have any questions, suggestions, or need further assistance, please don't hesitate to contact our team at divyangmandal03@gmail.com or by creating an issue on this repository.
 
 We appreciate your interest in ReportCard and wish you success in your educational endeavors! 📚🎓
